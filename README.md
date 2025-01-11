@@ -7,7 +7,7 @@ This is a weather app, but you can customize what you want to show by checking t
 The purpose to develop this app is allow user to decide what kind of info that they want to show. Users can choose what they want.
 
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Hello World in SwiftUI](https://youtu.be/KO9dt_X7iE4)
 
 # Development Environment
 
