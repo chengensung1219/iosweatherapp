@@ -18,4 +18,4 @@ This is an iOS app, so it is important to use SwiftUI and Xcode to develop the a
 
 # Useful Websites
 * [Beginners Weather App in SwiftUI](https://nabendu82.medium.com/beginners-weather-app-in-swiftui-1820b08e18e1)
-* [OpenWeather API]([https://firebase.google.com/docs/ios/setup](https://openweathermap.org/current))
+* [OpenWeather API](https://openweathermap.org/current)
