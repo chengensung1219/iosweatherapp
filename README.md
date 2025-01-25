@@ -2,7 +2,8 @@
 
 I want to learn more about mobile app development. The reason I choose iOS is that SwiftUI's declarative syntax simplifies the construction of user interfaces, allowing developers to focus more on functionality rather than style details. 
 
-This is a weather app. It can show the weather details at your local place according to your current location.
+This is a weather app. It can show the weather details at your local place according to your current location. The weather details include the sunrise & sunset, the temperature, humidity, wind speed, and pressure.
+
 
 The purpose of developing this app is to provide users with a nice look, clean, and easy-to-use weather app without giving a lot of weather info to confuse users. We aim to focus on important weather information.
 
