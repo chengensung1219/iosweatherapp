@@ -8,7 +8,7 @@ This is a weather app. It can show the weather details at your local place accor
 The purpose of developing this app is to provide users with a nice look, clean, and easy-to-use weather app without giving a lot of weather info to confuse users. We aim to focus on important weather information.
 
 
-[Weather APP in SwiftUI](https://youtu.be/KO9dt_X7iE4)
+[Weather APP in SwiftUI](https://youtu.be/YpspLUN0iGU)
 
 # Development Environment
 
