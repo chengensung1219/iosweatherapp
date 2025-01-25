@@ -9,18 +9,24 @@ import SwiftUI
 
 struct MainView: View {
     
+    // State object to manage the user's location
     @StateObject var locationManager = LocationManager()
+    
+    // State variables to control the visibility of different views
     @State var showSunView = false
     @State var showWeatherDetail = false
     
+    // Weather data passed into the view
     var weather: ResponseBody
     
     var body: some View {
-        VStack{
+        VStack {
+            // Display location and weather information
             VStack {
                 HStack {
                     Spacer()
                     HStack(alignment: .center){
+                        // Location icon and name display
                         Image(systemName: "mappin")
                             .resizable()
                             .frame(width: 8, height: 20)
@@ -32,6 +38,7 @@ struct MainView: View {
                     }
                     .padding(.leading, 30)
                     Spacer()
+                    // Location refresh button
                     Button(action: {
                         locationManager.requestLocation()
                     }){
@@ -40,30 +47,35 @@ struct MainView: View {
                             .frame(width: 35, height: 35)
                             .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
                     }
-                    
                 }
                 .padding([.leading, .trailing])
+                
+                // Weather information display
                 VStack{
+                    // Main weather condition
                     Text(weather.weather[0].main)
                         .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
                         .font(.system(size: 18, weight: .bold))
                         .padding(.top, 10)
                     
                     HStack(spacing: 30){
-                        
+                        // Temperature display
                         Text(weather.main.temp.roundDouble().description + "°")
                             .foregroundColor(.white)
                             .font(.system(size: 90, weight: .semibold).width(.compressed))
                             .padding(.top, -15)
                         
-                        Image(systemName: "cloud.sun.fill")
+                        // Weather icon
+                        Image(systemName: getWeatherIcon(name: weather.weather[0].main))
                             .resizable()
                             .renderingMode(.original)
-                            .frame(width: 105, height: 75)
+                            .frame(width: 105, height: 70)
+                            .padding(.top, -10)
                     }
                     .padding(.leading, 18)
                     .padding(.bottom, -5)
                     
+                    // Weather description
                     Text(weather.weather[0].description.capitalized)
                         .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
                         .font(.system(size: 14, weight: .bold))
@@ -71,10 +83,13 @@ struct MainView: View {
                 }
                 .frame(maxWidth: .infinity)
                 .background(
+                    // Background gradient for weather section
                     LinearGradient(gradient: Gradient(colors: [Color(red: 0.1, green: 0.8, blue: 0.9, opacity: 1.0), Color(red: 0.5, green: 0.2, blue: 0.7, opacity: 0.9)]), startPoint: .topLeading, endPoint: .bottomTrailing))
                 .cornerRadius(30)
                 .padding(.top, -10)
                 .padding()
+                
+                // Sunrise and Sunset info
                 VStack{
                     HStack{
                         Image(systemName: "sun.horizon")
@@ -91,18 +106,22 @@ struct MainView: View {
                                 .padding(.init(top: 0, leading: 0, bottom: -5, trailing: 18))
                         }
                     }
+                    
+                    // Sunrise and sunset icons and times
                     HStack{
                         VStack {
                             Image(systemName: "sunrise.fill")
                                 .resizable()
                                 .renderingMode(.original)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 50, height: 42)
                             Text(convertTimestamp(weather.sys.sunrise))
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(.white)
                         }
                         .padding(.init(top: 20, leading: 0, bottom: 20, trailing: 0))
                         .frame(maxWidth: .infinity)
+                        
+                        // Divider between sunrise and sunset
                         RoundedRectangle(cornerRadius: 2)
                             .frame(width: 100, height: 4)
                             .foregroundColor(.white)
@@ -112,7 +131,7 @@ struct MainView: View {
                             Image(systemName: "sunset.fill")
                                 .resizable()
                                 .renderingMode(.original)
-                                .frame(width: 50, height: 50)
+                                .frame(width: 50, height: 42)
                             Text(convertTimestamp(weather.sys.sunset))
                                 .font(.system(size: 18, weight: .semibold))
                                 .foregroundColor(.white)
@@ -130,6 +149,8 @@ struct MainView: View {
                     }
                 }
             }
+            
+            // Weather details section
             VStack{
                 HStack{
                     Image(systemName: "smoke")
@@ -147,6 +168,7 @@ struct MainView: View {
                     }
                 }
                 VStack{
+                    // Weather detail rows (feel like, pressure, etc.)
                     HStack(spacing: -10){
                         DetailView(imageName: "thermometer", name: "Feel like    ", value: weather.main.feels_like.roundDouble().description + "°")
                         
@@ -178,6 +200,8 @@ struct MainView: View {
                     showWeatherDetail = true
                 }
             }
+            
+            // External link button to Google Weather search
             Button(action: {
                 if let url = URL(string: "https://www.google.com/search?q=weather") {
                     UIApplication.shared.open(url)
@@ -197,6 +221,7 @@ struct MainView: View {
             }
             .padding(.top, 10)
             Spacer()
+                // Sheets to show detailed views for Sunrise/Sunset and Weather Details
                 .sheet(isPresented: $showSunView){
                     SunView(isShowing: $showSunView, weather: weather, sunriseTime: convertTimestamp(weather.sys.sunrise), sunsetTime: convertTimestamp(weather.sys.sunset))
                         .presentationCornerRadius(30)
@@ -208,19 +233,40 @@ struct MainView: View {
                         .presentationCornerRadius(30)
                         .presentationDetents([.fraction(0.5)])
                         .presentationBackground(Color(red: 0.155, green: 0.155, blue: 0.155, opacity: 1))
-                    
                 }
         }
     }
-
+    
+    // Function to convert timestamp to readable time format
     func convertTimestamp(_ timestamp: TimeInterval) -> String {
-    let date = Date(timeIntervalSince1970: timestamp)
-    let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "h:mm a"
-    dateFormatter.timeZone = TimeZone(secondsFromGMT: weather.timezone)
-    return dateFormatter.string(from: date)
+        let date = Date(timeIntervalSince1970: timestamp)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "h:mm a"
+        dateFormatter.timeZone = TimeZone(secondsFromGMT: weather.timezone)
+        return dateFormatter.string(from: date)
+    }
+    
+    // Function to return corresponding weather icon based on condition
+    func getWeatherIcon(name: String) -> String {
+        switch name {
+        case "Clouds":
+            return "cloud.sun.fill"
+        case "Rain":
+            return "cloud.rain.fill"
+        case "Clear":
+            return "sun.horizon.fill"
+        case "Drizzle":
+            return "cloud.drizzle.fill"
+        case "Thunderstorm":
+            return "cloud.bolt.rain.fill"
+        case "Snow":
+            return "cloud.snow.fill"
+        default:
+            return "sun.fill"
+        }
     }
 }
+
 
 #Preview {
     MainView(weather: previewWeather)
