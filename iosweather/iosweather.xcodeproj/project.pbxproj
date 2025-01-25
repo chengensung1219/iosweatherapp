@@ -7,19 +7,19 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		239240CC2D31FBF60078F4E5 /* helloworld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = helloworld.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		23F7282D2D45339F004B0E36 /* iosweather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosweather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		239240CE2D31FBF60078F4E5 /* helloworld */ = {
+		23F7282F2D45339F004B0E36 /* iosweather */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = helloworld;
+			path = iosweather;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		239240C92D31FBF60078F4E5 /* Frameworks */ = {
+		23F7282A2D45339F004B0E36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -29,18 +29,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		239240C32D31FBF60078F4E5 = {
+		23F728242D45339F004B0E36 = {
 			isa = PBXGroup;
 			children = (
-				239240CE2D31FBF60078F4E5 /* helloworld */,
-				239240CD2D31FBF60078F4E5 /* Products */,
+				23F7282F2D45339F004B0E36 /* iosweather */,
+				23F7282E2D45339F004B0E36 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		239240CD2D31FBF60078F4E5 /* Products */ = {
+		23F7282E2D45339F004B0E36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				239240CC2D31FBF60078F4E5 /* helloworld.app */,
+				23F7282D2D45339F004B0E36 /* iosweather.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,64 +48,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		239240CB2D31FBF60078F4E5 /* helloworld */ = {
+		23F7282C2D45339F004B0E36 /* iosweather */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 239240DA2D31FBF80078F4E5 /* Build configuration list for PBXNativeTarget "helloworld" */;
+			buildConfigurationList = 23F7283B2D4533A0004B0E36 /* Build configuration list for PBXNativeTarget "iosweather" */;
 			buildPhases = (
-				239240C82D31FBF60078F4E5 /* Sources */,
-				239240C92D31FBF60078F4E5 /* Frameworks */,
-				239240CA2D31FBF60078F4E5 /* Resources */,
+				23F728292D45339F004B0E36 /* Sources */,
+				23F7282A2D45339F004B0E36 /* Frameworks */,
+				23F7282B2D45339F004B0E36 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				239240CE2D31FBF60078F4E5 /* helloworld */,
+				23F7282F2D45339F004B0E36 /* iosweather */,
 			);
-			name = helloworld;
+			name = iosweather;
 			packageProductDependencies = (
 			);
-			productName = helloworld;
-			productReference = 239240CC2D31FBF60078F4E5 /* helloworld.app */;
+			productName = iosweather;
+			productReference = 23F7282D2D45339F004B0E36 /* iosweather.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		239240C42D31FBF60078F4E5 /* Project object */ = {
+		23F728252D45339F004B0E36 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
-					239240CB2D31FBF60078F4E5 = {
+					23F7282C2D45339F004B0E36 = {
 						CreatedOnToolsVersion = 16.1;
 					};
 				};
 			};
-			buildConfigurationList = 239240C72D31FBF60078F4E5 /* Build configuration list for PBXProject "helloworld" */;
+			buildConfigurationList = 23F728282D45339F004B0E36 /* Build configuration list for PBXProject "iosweather" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 239240C32D31FBF60078F4E5;
+			mainGroup = 23F728242D45339F004B0E36;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 239240CD2D31FBF60078F4E5 /* Products */;
+			productRefGroup = 23F7282E2D45339F004B0E36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				239240CB2D31FBF60078F4E5 /* helloworld */,
+				23F7282C2D45339F004B0E36 /* iosweather */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		239240CA2D31FBF60078F4E5 /* Resources */ = {
+		23F7282B2D45339F004B0E36 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -115,7 +115,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		239240C82D31FBF60078F4E5 /* Sources */ = {
+		23F728292D45339F004B0E36 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -125,7 +125,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		239240D82D31FBF80078F4E5 /* Debug */ = {
+		23F728392D4533A0004B0E36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -188,7 +188,7 @@
 			};
 			name = Debug;
 		};
-		239240D92D31FBF80078F4E5 /* Release */ = {
+		23F7283A2D4533A0004B0E36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -244,14 +244,14 @@
 			};
 			name = Release;
 		};
-		239240DB2D31FBF80078F4E5 /* Debug */ = {
+		23F7283C2D4533A0004B0E36 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"helloworld/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iosweather/Preview Content\"";
 				DEVELOPMENT_TEAM = T5V7BVT8BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -265,7 +265,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.helloworld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -273,14 +273,14 @@
 			};
 			name = Debug;
 		};
-		239240DC2D31FBF80078F4E5 /* Release */ = {
+		23F7283D2D4533A0004B0E36 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"helloworld/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"iosweather/Preview Content\"";
 				DEVELOPMENT_TEAM = T5V7BVT8BC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -294,7 +294,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.helloworld;
+				PRODUCT_BUNDLE_IDENTIFIER = com.iosweather;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -305,25 +305,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		239240C72D31FBF60078F4E5 /* Build configuration list for PBXProject "helloworld" */ = {
+		23F728282D45339F004B0E36 /* Build configuration list for PBXProject "iosweather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				239240D82D31FBF80078F4E5 /* Debug */,
-				239240D92D31FBF80078F4E5 /* Release */,
+				23F728392D4533A0004B0E36 /* Debug */,
+				23F7283A2D4533A0004B0E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		239240DA2D31FBF80078F4E5 /* Build configuration list for PBXNativeTarget "helloworld" */ = {
+		23F7283B2D4533A0004B0E36 /* Build configuration list for PBXNativeTarget "iosweather" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				239240DB2D31FBF80078F4E5 /* Debug */,
-				239240DC2D31FBF80078F4E5 /* Release */,
+				23F7283C2D4533A0004B0E36 /* Debug */,
+				23F7283D2D4533A0004B0E36 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 239240C42D31FBF60078F4E5 /* Project object */;
+	rootObject = 23F728252D45339F004B0E36 /* Project object */;
 }
