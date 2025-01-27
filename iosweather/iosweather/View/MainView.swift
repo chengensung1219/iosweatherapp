@@ -10,7 +10,7 @@ import SwiftUI
 struct MainView: View {
     
     // State object to manage the user's location
-    @StateObject var locationManager = LocationManager()
+    @EnvironmentObject var locationManager: LocationManager
     
     // State variables to control the visibility of different views
     @State var showSunView = false
@@ -36,17 +36,7 @@ struct MainView: View {
                             .font(.system(size: 18, weight: .bold))
                             .foregroundColor(.white)
                     }
-                    .padding(.leading, 30)
                     Spacer()
-                    // Location refresh button
-                    Button(action: {
-                        locationManager.requestLocation()
-                    }){
-                        Image(systemName: "location.circle")
-                            .resizable()
-                            .frame(width: 35, height: 35)
-                            .foregroundColor(Color(red: 0.9, green: 0.9, blue: 0.9))
-                    }
                 }
                 .padding([.leading, .trailing])
                 

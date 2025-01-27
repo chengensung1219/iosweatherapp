@@ -259,9 +259,9 @@ struct WeatherDetailsView: View {
                     VStack {
                         // Display max and min temperature
                         HStack(spacing: 40) {
-                            DetailView(imageName: "thermometer.high", name: "Max temp     ", value: weather.main.tempMax.roundDouble().description + "°")
+                            DetailView(imageName: "thermometer.high", name: "Max temp     ", value: weather.main.temp_max.roundDouble().description + "°")
                                 .padding(.init(top: 20, leading: 8, bottom: 10, trailing: 0))
-                            DetailView(imageName: "thermometer.low", name: "Min temp      ", value: weather.main.tempMin.roundDouble().description +  "°")
+                            DetailView(imageName: "thermometer.low", name: "Min temp      ", value: weather.main.temp_min.roundDouble().description +  "°")
                                 .padding(.init(top: 20, leading: 4, bottom: 10, trailing: 10))
                         }
                     }
