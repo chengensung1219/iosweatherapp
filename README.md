@@ -8,7 +8,7 @@ This is a weather app. It can show the weather details at your local place accor
 The purpose of developing this app is to provide users with a nice look, clean, and easy-to-use weather app without giving a lot of weather info to confuse users. We aim to focus on important weather information.
 
 
-[Weather APP in SwiftUI](https://youtu.be/KO9dt_X7iE4)
+[Weather APP in SwiftUI](https://youtu.be/YpspLUN0iGU)
 
 # Development Environment
 
@@ -18,4 +18,4 @@ This is an iOS app, so it is important to use SwiftUI and Xcode to develop the a
 
 # Useful Websites
 * [Beginners Weather App in SwiftUI](https://nabendu82.medium.com/beginners-weather-app-in-swiftui-1820b08e18e1)
-* [OpenWeather API]([https://firebase.google.com/docs/ios/setup](https://openweathermap.org/current))
+* [OpenWeather API](https://openweathermap.org/current)
